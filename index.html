@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Prochaines collectes</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="main">
+        <div class="entete">Chandler, 2023</div>
+        <div class="principale">
+            <div class="carte" id="poubelle">
+                <i class="ri-delete-bin-line ri-8x"></i>
+                <div class="description">
+                    Prochaine collecte : 
+                    <div
+                        class="date"
+                        id="date-prochaine-poubelle">
+                    </div>
+                </div>
+            </div>
+            <div class="carte" id="recyclage">
+                <i class="ri-recycle-line ri-8x"></i>
+                <div class="description">
+                    Prochaine collecte :
+                    <div
+                        class="date"
+                        id="date-prochaine-recyclage">
+                    </div>
+                </div>
+            </div>
+            <div class="carte" id="composte">
+                <i class="ri-apple-line ri-8x"></i>
+                <div class="description">
+                    Prochaine collecte : 
+                    <div
+                        class="date"
+                        id="date-prochaine-composte">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment-with-locales.min.js"></script>
+	<script src="index.js"></script>
+  </body>
+</html>
