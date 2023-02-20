@@ -21,12 +21,18 @@ async function obtenirProchaineDate(zone, type) {
 }
 
 function obtenirDistance(date) {
-    if (moment(date).isSame(moment(), 'day')) {
+    const EST_MEME_JOURNEE = moment(date).isSame(moment(), 'day')
+    if (EST_MEME_JOURNEE) {
         return ("aujourd'hui")
     }
+    
+    const JOURNEE_SUIVANTE = moment().add(1, 'day')
+    const EST_JOURNEE_SUIVANTE = moment(date).isSame(JOURNEE_SUIVANTE, 'day')
+    if (EST_JOURNEE_SUIVANTE) {
+        return ("demain")
+    }
 
-    const HEURE_DE_COLLECTE = 6
-    return date.add(HEURE_DE_COLLECTE, 'hours').fromNow()
+    return date.fromNow()
 }
 
 async function affichageDate(zone, type) {
